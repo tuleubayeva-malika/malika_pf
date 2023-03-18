@@ -48,6 +48,15 @@ header {
     color: #464646;
 }
 
+#portfolio_list {
+    display: flex;
+    /* gap: 40px; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
 #portfolio h1, 
 #about h1,
 #contacts h1 {
