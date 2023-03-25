@@ -9,19 +9,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </head>
     <body>
-        <!-- <header>
-            <ul class="nav-my nav-pills-my">
-                <li class="`">
-                  <a class="nav-link active" aria-current="page" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contacts">Contacts</a>
-                </li>
-              </ul>
-        </header> -->
         <div class="my-photo">
             <img src="/malika_pf/img/my-photo.jpeg">
         </div>
@@ -30,7 +17,7 @@
             <p>I'm starting my journey as Frontened developer. Here is my portfolio.</p>
         </div>
         <section id="contacts">
-            <!-- <h1>Contact me</h1> -->
+           
             <div class="icons">
                 <a href="mailto:tuleubayeva.malika@gmail.com" target="_blank">
                     <img src="/malika_pf/img/gmail.svg" alt="gmail">
@@ -52,11 +39,9 @@
                 
             </div>
         </section>
-        <!-- <section id="about">
-            <h1>About me</h1>
-        </section> -->
+        
         <section id="contacts">
-            <!-- <h1>Contact me</h1> -->
+            
             <div class="icons">
                 <a href="mailto:tuleubayeva.malika@gmail.com" target="_blank">
                     <img src="/malika_pf/img/gmail.svg" alt="gmail">
@@ -105,7 +90,7 @@
             portfolios.map(function(portfolio) {
             let portfolioElement = document.createElement("article");
             portfolio_list.appendChild(portfolioElement);
-        // создать элементы h1
+        // создать элементы h3
         // создать элемент anchor
         // присвоить  anchor текст title
         // присвоить anchor href link
@@ -113,11 +98,21 @@
         // articleElement добавить child h1
             let titleElement = document.createElement("h3");
             let anchorElement = document.createElement("a");
+            let anchorForImg = document.createElement("a");
             let imgElement = document.createElement("img")
+
+            anchorForImg.setAttribute("href", portfolio.link);
+            anchorForImg.setAttribute("target", '_blank');
+            
             imgElement.setAttribute("src", portfolio.imgSrc);
-            portfolioElement.appendChild(imgElement);
-            anchorElement.innerHTML=portfolio.title;
+            // portfolioElement.appendChild(imgElement);
+
+            anchorForImg.appendChild(imgElement);
+            portfolioElement.appendChild(anchorForImg);
+
             anchorElement.setAttribute("href", portfolio.link);
+            anchorElement.setAttribute("target", '_blank');
+            anchorElement.innerHTML=portfolio.title;
             titleElement.appendChild(anchorElement);
             portfolioElement.appendChild(titleElement);
             
