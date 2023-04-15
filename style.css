@@ -77,8 +77,21 @@ article a {
 article {
     display: flex;
     align-items: center;
-    gap: 65px;
-    min-width: 1240px;
+    /* gap: 65px;
+    min-width: 1240px; */
+}
+
+@media screen and (min-width: 1240px) {
+    article {
+        gap: 65px;
+        min-width: 1240px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    article {
+        flex-wrap: wrap;
+    }
 }
 
 .project_desc {
@@ -98,12 +111,15 @@ button {
     background-color: #4e4e4e;
     color: white;
     font-size: smaller;
+    border-radius: 3px;
+    border: none;
 }
 
 #skills_list {
     display: flex;
     flex-wrap: wrap;
     margin: 20px 0;
+    gap: 10px;
 }
 
 span p {
