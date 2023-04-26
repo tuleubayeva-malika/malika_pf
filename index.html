@@ -82,10 +82,18 @@
                 },
             
                 {
-                link: "",
+                link: "https://tuleubayeva-malika.github.io/GSAP_Project/",
                 imgSrc: "/malika_pf/img/gsap.png",
                 title: "GSAP Project",
                 description: "The goal of the project is to demonstrate my skills in working with GSAP technology.",
+                buttonText: "PROJECT PREVIEW",
+                },
+            
+                {
+                link: "https://tuleubayeva-malika.github.io/GSAP_Project_II/",
+                imgSrc: "/malika_pf/img/gsap_2.png",
+                title: "GSAP Project II",
+                description: "Animated banner developed on pure JS, all animation based on GSAP technology.",
                 buttonText: "PROJECT PREVIEW",
                 }];
 
@@ -112,12 +120,13 @@
                 portfolioElement.appendChild(divImgElement);
                 portfolioElement.appendChild(divDescElement);
                 divDescElement.setAttribute("class", "project_desc")
-
+                
                 anchorForImg.setAttribute("href", portfolio.link);
                 anchorForImg.setAttribute("target", '_blank');
                 imgElement.setAttribute("src", portfolio.imgSrc);
                 anchorForImg.appendChild(imgElement);
                 divImgElement.appendChild(anchorForImg);
+                divImgElement.setAttribute("class", "project_img")
 
 
                 divDescElement.appendChild(titleElement);
